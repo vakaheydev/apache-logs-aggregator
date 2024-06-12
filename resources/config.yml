@@ -1,0 +1,27 @@
+app:
+  # автоматическое агрегирование логов
+  schedule_update_logs_enabled: True
+
+  # интервал агрегирование в секундах
+  schedule_update_logs_delay: 30
+
+  # автоматический запуск веб-сервера Apache
+  start_apache_server: True
+
+logs:
+  # формат логов
+
+  #  %h Remote hostname
+  #  %l Remote logname
+  #  %u Remote user (authentication)
+  #  %t Time the request was received, in the format [18/Sep/2011:19:18:28 -0400]
+  #  %r First line of request (quoted)
+  #  %>s final status of request
+  #  %b Size of response bytes excluding HTTP headers
+  format: '%h %l %u %t \"%r\" %>s %b'
+
+  # путь до папки с логами
+  path: server/Apache24/logs
+
+  # название файла с access логами
+  access_log: access.log
