@@ -5,12 +5,12 @@
 
 Склонируйте репозиторий:
 ``` sh
-git clone https://github.com/yourusername/apache-log-aggregator.git
+git clone https://github.com/vakaheydev/apache-logs-aggregator
 ```
 Перейдите в каталог проекта:
 
 ``` sh
-cd apache-log-aggregator 
+cd apache-logs-aggregator 
 ```
 Установите зависимости:
 
