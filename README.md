@@ -17,7 +17,7 @@ cd apache-logs-aggregator
 ``` sh
 pip install -r requirements.txt 
 ```
-Настройте конфигурационный файл config.yml в папке resources.
+Настройте конфигурационный файл config.yml в папке resources (конфигурация по умолчанию представлена ниже, в разделе конфигурации).
 
 Запустите приложение:
 
