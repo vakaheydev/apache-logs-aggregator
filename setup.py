@@ -9,6 +9,7 @@ from scheduler import Scheduler
 
 
 def start_server():
+    """Start Apache web server"""
     try:
         os.chdir("server/Apache24/bin")
         subprocess.Popen(['./httpd.exe'])
@@ -19,6 +20,7 @@ def start_server():
 
 
 def stop_server():
+    """Stop Apache web server"""
     try:
         subprocess.run(['TASKKILL', '/F', '/IM', 'httpd.exe', '/T'], stdout=subprocess.DEVNULL,
                        stderr=subprocess.DEVNULL)  # Остановить сервер
@@ -28,6 +30,7 @@ def stop_server():
 
 
 def create_app():
+    """Initialize and configure the application"""
     if config['app']['start_apache_server']:
         start_server()
 
@@ -40,5 +43,6 @@ def create_app():
 
 
 def close_app():
+    """Shutdown the application"""
     if config['app']['start_apache_server']:
         stop_server()

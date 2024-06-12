@@ -7,6 +7,8 @@ from logparser import config
 
 
 class Scheduler:
+    """Scheduler responsible for performing periodic log aggregation"""
+
     @staticmethod
     def create_scheduler(controller) -> schedule.Scheduler | None:
         """Creates and returns a scheduler if schedule_update_logs_enabled is True, otherwise returns None"""
@@ -26,7 +28,7 @@ class Scheduler:
     @staticmethod
     def scheduler_aggregate_logs(controller):
         controller.aggregate_logs()
-        print("> ", end='')
+        controller.print_prefix()
 
     def __init__(self, seconds, job):
         self.seconds = seconds

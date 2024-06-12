@@ -2,6 +2,8 @@ from datetime import datetime
 
 
 class Log:
+    """Domain object representing a log entry"""
+
     def __init__(self, ip: str = None, date_time: datetime = None, action: str = None, status: int = None):
         self.ip = ip
         self.date_time = date_time
